@@ -144,9 +144,7 @@ async function startTheApp() {
   console.warn((await api.requestUsers()).map(logPerson));
 
   console.warn('Server time:');
-  console.warn(
-    new Date(await api.requestCurrentServerTime()).toLocaleString()
-  );
+  console.warn(new Date(await api.requestCurrentServerTime()).toLocaleString());
 
   console.warn('Coffee machine queue length:');
   console.warn(await api.requestCoffeeMachineQueueLength());
